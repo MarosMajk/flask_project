@@ -19,4 +19,6 @@ Vagrant.configure("2") do |config|
 	v.cpus = 4
   end
   config.vm.network "public_network"
+
+  config.vm.provision :shell, :path => "bootstrap.sh"
 end
